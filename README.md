@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 基本介紹
+1.此專案使用 create-react-app 搭建
+2.環境包含了 react 全家桶成員 ['react', 'react-router', 'redux', 'react-redux']
+3.CSS 部份採用 styled-components
+4.全域 css 樣式已配置 reset.css 於路徑 /assets/styles 中
+5.api 部份採用 axios
+6.本地 api 模擬使用 express + express-mockjs
 
-## Available Scripts
+### API
+1.本地 api 模擬請參照 api-interface/mocks/sample.js 檔案
+2.搭載 express-mockjs 可亂數產生資料，詳情參考 http://mockjs.com/
+3.路徑 /api/urlConfig.js 為 apiUrl 配置文件
+4.路徑 /api/index.js 為 api function，可在此定義更多行為
+5.本地 api 模擬中如有圖片資源為 /static 開頭請將對應檔案放置於 /public/static 中
 
-In the project directory, you can run:
+### react-router
+1.路由配置文件分為三部份，"路由常數(links.js)" + "路由配置表(config.js)" + "路由入口(index.js)"
+2.路由配置表預先搭載選項 nav (是否需要導航) 及 auth (是否需要會員權限)
+3.路由入口判定多項行為，如未於配置表設定元件導向 404 頁面，及取得會員資料進 redux ... 等，可自行依需求配置
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### redux
+1.路徑 /reducers/index.js 配置 store 基本資訊，於 index.jsx 中引入使用
+2.預先搭載 loading reducer
+3.配合路徑 /actions
