@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Route, useHistory, useLocation, Redirect } from 'react-router-dom'
 import * as routes from './links'
-import { USER_LOGIN } from '../actions/actionType'
+import { USER_LOGIN } from '@actions/actionType'
 
 const Guard = (props) => {
   const { config } = props

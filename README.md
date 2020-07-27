@@ -5,6 +5,8 @@
 4.全域 css 樣式已配置 reset.css 於路徑 /assets/styles 中
 5.api 部份採用 axios
 6.本地 api 模擬使用 express + express-mockjs
+7.使用自定義路徑名稱套件，"react-app-rewire-aliases" + "react-app-rewired"，更動了原生
+  CRA script 指令碼以符合套件需求，另於根目錄增加 config-overrides.js 做配置
 
 ### API
 1.本地 api 模擬請參照 api-interface/mocks/sample.js 檔案

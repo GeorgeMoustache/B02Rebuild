@@ -1,4 +1,4 @@
-import { LOADING } from '../actions/actionType'
+import { LOADING } from '@actions/actionType'
 
 const loading = (enabled = false, action) => {
   switch (action.type) {

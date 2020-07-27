@@ -1,7 +1,7 @@
 /**
- * ===API格式範例===
+ * 系統資訊
  *
- * @url sample
+ * @url config
  */
 
 module.exports = (req) => {
@@ -9,7 +9,8 @@ module.exports = (req) => {
     code: 0,
     message: "成功",
     data: {
-      msg: 'API格式範例'
+      clientName: 'OG東方',
+      clientCode: 'ogEast'
     }
   }
 }

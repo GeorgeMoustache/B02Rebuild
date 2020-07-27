@@ -1,2 +1,5 @@
 export const HOME = '/'
+export const GAME_CENTER = '/gameCenter'
+export const EVENT = '/event'
+export const MEMBER = '/member'
 export const NOT_FOUND = '/404'
